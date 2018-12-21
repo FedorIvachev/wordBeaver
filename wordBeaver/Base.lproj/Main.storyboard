@@ -165,7 +165,7 @@
             </objects>
             <point key="canvasLocation" x="870" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Language-->
         <scene sceneID="L4H-Hm-g0O">
             <objects>
                 <viewController id="4pN-Wh-rsO" sceneMemberID="viewController">
@@ -184,7 +184,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="64s-VY-7yX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="M0R-u0-del"/>
+                    <navigationItem key="navigationItem" title="Language" id="M0R-u0-del"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o06-hL-DTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,18 +193,48 @@
         <!--Train-->
         <scene sceneID="15V-RR-phB">
             <objects>
-                <viewController id="toR-5i-gTt" sceneMemberID="viewController">
+                <viewController id="toR-5i-gTt" customClass="TrainViewController" customModule="wordBeaver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EZd-md-DXp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tl0-aF-qgN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="612"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tGC-rD-Jx6">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="612"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="612" id="eOj-Ul-Sok"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tGC-rD-Jx6" firstAttribute="centerX" secondItem="Tl0-aF-qgN" secondAttribute="centerX" id="GTv-0D-4Oq"/>
+                                    <constraint firstItem="tGC-rD-Jx6" firstAttribute="leading" secondItem="Tl0-aF-qgN" secondAttribute="leading" id="Jqg-NR-9Gr"/>
+                                    <constraint firstAttribute="bottom" secondItem="tGC-rD-Jx6" secondAttribute="bottom" id="ays-jM-da6"/>
+                                    <constraint firstItem="tGC-rD-Jx6" firstAttribute="top" secondItem="Tl0-aF-qgN" secondAttribute="top" id="g0V-pw-Xi7"/>
+                                    <constraint firstAttribute="trailing" secondItem="tGC-rD-Jx6" secondAttribute="trailing" id="kRB-wj-cFS"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tl0-aF-qgN" firstAttribute="top" secondItem="kXS-QB-png" secondAttribute="top" id="I96-Q8-PgL"/>
+                            <constraint firstItem="Tl0-aF-qgN" firstAttribute="leading" secondItem="EZd-md-DXp" secondAttribute="leading" id="MOC-R8-w3r"/>
+                            <constraint firstItem="Tl0-aF-qgN" firstAttribute="bottom" secondItem="kXS-QB-png" secondAttribute="bottom" constant="14" id="Muq-pj-x1X"/>
+                            <constraint firstAttribute="trailing" secondItem="Tl0-aF-qgN" secondAttribute="trailing" id="ZLi-QD-U4h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kXS-QB-png"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Train" id="610-in-56z"/>
+                    <connections>
+                        <outlet property="scrollView" destination="Tl0-aF-qgN" id="gA2-Da-xJf"/>
+                        <outlet property="stackView" destination="tGC-rD-Jx6" id="p9n-i9-7Uz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQB-rW-J0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="825"/>
+            <point key="canvasLocation" x="-2.3999999999999999" y="824.43778110944538"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

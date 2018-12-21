@@ -15,6 +15,7 @@
 		89814C5F21CD7FFC0006723C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89814C5D21CD7FFC0006723C /* LaunchScreen.storyboard */; };
 		89814C6A21CD7FFC0006723C /* wordBeaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89814C6921CD7FFC0006723C /* wordBeaverTests.swift */; };
 		89814C7521CD7FFC0006723C /* wordBeaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89814C7421CD7FFC0006723C /* wordBeaverUITests.swift */; };
+		89814C8521CDA8190006723C /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89814C8421CDA8190006723C /* TrainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		89814C7021CD7FFC0006723C /* wordBeaverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wordBeaverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89814C7421CD7FFC0006723C /* wordBeaverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordBeaverUITests.swift; sourceTree = "<group>"; };
 		89814C7621CD7FFC0006723C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89814C8421CDA8190006723C /* TrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				89814C5B21CD7FFC0006723C /* Assets.xcassets */,
 				89814C5D21CD7FFC0006723C /* LaunchScreen.storyboard */,
 				89814C6021CD7FFC0006723C /* Info.plist */,
+				89814C8421CDA8190006723C /* TrainViewController.swift */,
 			);
 			path = wordBeaver;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89814C5721CD7FFA0006723C /* SecondViewController.swift in Sources */,
+				89814C8521CDA8190006723C /* TrainViewController.swift in Sources */,
 				89814C5321CD7FFA0006723C /* AppDelegate.swift in Sources */,
 				89814C5521CD7FFA0006723C /* FirstViewController.swift in Sources */,
 			);
@@ -439,6 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FD9AJ84994;
 				INFOPLIST_FILE = wordBeaver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,6 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FD9AJ84994;
 				INFOPLIST_FILE = wordBeaver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
