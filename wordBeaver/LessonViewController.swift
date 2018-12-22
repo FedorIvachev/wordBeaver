@@ -65,7 +65,6 @@ class LessonViewCardController: CardPartsViewController {
             print(lessonDictStore[textField.text!]!)
         }
     }
-    
 }
 
 
@@ -94,6 +93,7 @@ class LessonViewController: UIViewController {
     
     var lessonDict = UserDefaults.standard.dictionary(forKey: "lesson")
     var wordTranslation = ""
+    var cheatedDict = [String: String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,6 +135,8 @@ class LessonViewController: UIViewController {
     
     @IBAction func translateButtonPressed(_ sender: Any) {
         translationTextField.text = wordTranslation
+        cheatedDict[wordTranslation] = wordLabel.text!
+        print("Pressed!")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // change 2 to desired number of seconds
             self.translationTextField.text = ""
         }
@@ -158,7 +160,10 @@ class LessonViewController: UIViewController {
         var mainDict = UserDefaults.standard.dictionary(forKey: "main")
         let lessonDict = UserDefaults.standard.dictionary(forKey: "lesson")
         for elem in lessonDict! {
-            mainDict!.removeValue(forKey: elem.key)
+            if (cheatedDict[elem.key] == nil){
+                mainDict!.removeValue(forKey: elem.key)
+                print(elem.key)
+            }
         }
         UserDefaults.standard.set(mainDict, forKey: "main")
         let newLessonDict = [String: String]()

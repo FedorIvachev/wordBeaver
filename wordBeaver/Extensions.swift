@@ -48,13 +48,10 @@ func addWordsToCurrentLesson(){
         var lesson = [String: String]()
         for _ in 0...10{
             let word = mainDict?.randomElement()
-            print(word?.key ?? "Sample")
-            print(word?.value ?? "Sample")
             lesson[word?.key ?? "Sample"] = word?.value as? String
         }
         UserDefaults.standard.set(lesson, forKey: "lesson")
     } else {
-        print(lessonDict as Any)
         print("Set already!")
     }
 }
