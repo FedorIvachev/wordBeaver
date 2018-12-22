@@ -117,7 +117,8 @@ class LessonViewController: UIViewController {
             lessonDict?.removeValue(forKey: textField.text!)
             if counter == 11 {
                 addLearnedWords()
-                deleteLearned 
+                deleteLearnedWords()
+                addWordsToCurrentLesson()
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
                 self.present(newViewController, animated: true, completion: nil)
@@ -137,6 +138,7 @@ class LessonViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // change 2 to desired number of seconds
             self.translationTextField.text = ""
         }
+        
     }
     
     func addLearnedWords(){
@@ -152,5 +154,14 @@ class LessonViewController: UIViewController {
         }
     }
     
-    
+    func deleteLearnedWords(){
+        var mainDict = UserDefaults.standard.dictionary(forKey: "main")
+        let lessonDict = UserDefaults.standard.dictionary(forKey: "lesson")
+        for elem in lessonDict! {
+            mainDict!.removeValue(forKey: elem.key)
+        }
+        UserDefaults.standard.set(mainDict, forKey: "main")
+        let newLessonDict = [String: String]()
+        UserDefaults.standard.set(newLessonDict, forKey: "lesson")
+    }
 }

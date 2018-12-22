@@ -18,7 +18,6 @@ class TrainViewController: CardsViewController{
         super.viewDidLoad()
         addWordsToDictionary()
         addWordsToCurrentLesson()
-        addLearnedWords()
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -57,23 +56,6 @@ class TrainViewController: CardsViewController{
                 main[lang1Array[i]] = lang2Array[i]
             }
             UserDefaults.standard.set(main, forKey: "main")
-        } else {
-            print("Set already!")
-        }
-    }
-    
-    func addWordsToCurrentLesson(){
-        let mainDict = UserDefaults.standard.dictionary(forKey: "main") // not empty
-        let lessonDict = UserDefaults.standard.dictionary(forKey: "lesson")
-        if lessonDict == nil{
-            var lesson = [String: String]()
-            for _ in 0...10{
-                let word = mainDict?.randomElement()
-                print(word?.key ?? "Sample")
-                print(word?.value ?? "Sample")
-                lesson[word?.key ?? "Sample"] = word?.value as? String
-            }
-            UserDefaults.standard.set(lesson, forKey: "lesson")
         } else {
             print("Set already!")
         }
