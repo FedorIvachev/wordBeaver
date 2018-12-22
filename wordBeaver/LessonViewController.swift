@@ -65,6 +65,7 @@ class LessonViewCardController: CardPartsViewController {
             print(lessonDictStore[textField.text!]!)
         }
     }
+    
 }
 
 
@@ -91,7 +92,6 @@ class LessonViewController: UIViewController {
         }
     }
     
-    var lessonDictStore = [String: String]()
     var lessonDict = UserDefaults.standard.dictionary(forKey: "lesson")
     var wordTranslation = ""
 
@@ -116,10 +116,11 @@ class LessonViewController: UIViewController {
             counter += 1
             lessonDict?.removeValue(forKey: textField.text!)
             if counter == 11 {
+                addLearnedWords()
+                deleteLearned 
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
                 self.present(newViewController, animated: true, completion: nil)
-                
             } else {
                 let word = lessonDict?.first
                 wordLabel.text = (word?.value as! String)
@@ -135,6 +136,19 @@ class LessonViewController: UIViewController {
         translationTextField.text = wordTranslation
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // change 2 to desired number of seconds
             self.translationTextField.text = ""
+        }
+    }
+    
+    func addLearnedWords(){
+        var learnedDict = UserDefaults.standard.dictionary(forKey: "learned")
+        if (learnedDict == nil){
+            learnedDict = UserDefaults.standard.dictionary(forKey: "lesson")
+            UserDefaults.standard.set(learnedDict, forKey: "learned")
+        } else {
+            lessonDict = UserDefaults.standard.dictionary(forKey: "lesson")
+            let learnedDict1 = learnedDict! + lessonDict!
+            UserDefaults.standard.set(learnedDict1, forKey: "learned")
+            print(learnedDict1)
         }
     }
     

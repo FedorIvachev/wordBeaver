@@ -7,4 +7,5 @@ use_frameworks!
 target 'wordBeaver' do
     pod 'CardParts'
     pod 'Charts'
+    pod 'ChartsRealm'
 end

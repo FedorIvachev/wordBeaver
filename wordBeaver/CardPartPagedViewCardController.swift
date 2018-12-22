@@ -8,6 +8,7 @@
 
 import Foundation
 import CardParts
+import Charts
 
 class CardPartPagedViewCardController: CardPartsViewController {
     
@@ -47,6 +48,9 @@ class CardPartPagedViewCardController: CardPartsViewController {
             translation.font = UIFont.systemFont(ofSize: 20)
             sv.addArrangedSubview(translation)
             
+            let barView = BarChartView()
+            sv.addArrangedSubview(barView)
+            
             let emoji = CardPartTextView(type: .normal)
             emoji.text = self.emojis[Int(arc4random_uniform(UInt32(self.emojis.count)))]
             emoji.textAlignment = .center
@@ -59,4 +63,24 @@ class CardPartPagedViewCardController: CardPartsViewController {
         
         setupCardParts([cardPartTextView, cardPartPagedView])
     }
+}
+
+class BarChartController : CardPartsViewController {
+    let cardPartTextView = CardPartTextView(type: .normal)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        var stackViews: [CardPartStackView] = []
+        let sv = CardPartStackView()
+        sv.axis = .vertical
+        sv.spacing = 8
+        stackViews.append(sv)
+        let title = CardPartTextView(type: .title)
+        title.text = "Your Progress"
+        title.textAlignment = .center
+        title.font = UIFont.systemFont(ofSize: 20)
+        sv.addArrangedSubview(title)
+        let cardPartPagedView = CardPartPagedView(withPages: stackViews, andHeight: 200)
+        setupCardParts([cardPartTextView, cardPartPagedView])
+    }
+    
 }

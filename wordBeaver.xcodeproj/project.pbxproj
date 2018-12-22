@@ -140,7 +140,6 @@
 		89814C5121CD7FFA0006723C /* wordBeaver */ = {
 			isa = PBXGroup;
 			children = (
-				89868C3521CE7CC800C22A49 /* CardPartBarViewCardController.swift */,
 				89868C3121CE4DCC00C22A49 /* left.png */,
 				89814C8421CDA8190006723C /* TrainViewController.swift */,
 				89868C2D21CE364300C22A49 /* LessonViewController.swift */,
@@ -150,6 +149,7 @@
 				89868C1821CDBFE900C22A49 /* CardPartTitleDescriptionViewCardController.swift */,
 				89868C1621CDBEE600C22A49 /* CardPartTextViewCardController.swift */,
 				89868C2B21CE327400C22A49 /* CardPartTextFieldCardController.swift */,
+				89868C3521CE7CC800C22A49 /* CardPartBarViewCardController.swift */,
 				89814C5221CD7FFA0006723C /* AppDelegate.swift */,
 				89814C5621CD7FFA0006723C /* SecondViewController.swift */,
 				89814C5821CD7FFA0006723C /* Main.storyboard */,

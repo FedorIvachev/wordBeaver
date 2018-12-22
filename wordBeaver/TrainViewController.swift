@@ -25,8 +25,7 @@ class TrainViewController: CardsViewController{
         let cards: [CardPartsViewController] = [
             CardPartPagedViewCardController(),
             CardPartButtonViewCardController(),
-            CardPartTextFieldCardController(),
-            CardPartBarViewCardController()
+            BarChartController()
         ]
         
         loadCards(cards: cards)
@@ -36,7 +35,6 @@ class TrainViewController: CardsViewController{
     func addWordsToDictionary(){
         let mainDict = UserDefaults.standard.dictionary(forKey: "main")
         if (mainDict == nil) {
-            // Need to change this declaration to empty one
             var main = [String: String]()
             
             let Lang1URL = Bundle.main.path(forResource: "wordsFull", ofType: "txt")
@@ -78,13 +76,6 @@ class TrainViewController: CardsViewController{
             UserDefaults.standard.set(lesson, forKey: "lesson")
         } else {
             print("Set already!")
-        }
-    }
-    
-    func addLearnedWords(){
-        let score = UserDefaults.standard.integer(forKey: "score")
-        if (score == 0) {
-            UserDefaults.standard.set(0, forKey: "score")
         }
     }
     
