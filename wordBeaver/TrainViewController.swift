@@ -18,13 +18,15 @@ class TrainViewController: CardsViewController{
         super.viewDidLoad()
         addWordsToDictionary()
         addWordsToCurrentLesson()
+        addLearnedWords()
         
         // Do any additional setup after loading the view, typically from a nib.
         
         let cards: [CardPartsViewController] = [
-            CardPartCenteredViewCardController(),
             CardPartPagedViewCardController(),
             CardPartButtonViewCardController(),
+            CardPartTextFieldCardController(),
+            CardPartBarViewCardController()
         ]
         
         loadCards(cards: cards)
@@ -76,6 +78,13 @@ class TrainViewController: CardsViewController{
             UserDefaults.standard.set(lesson, forKey: "lesson")
         } else {
             print("Set already!")
+        }
+    }
+    
+    func addLearnedWords(){
+        let score = UserDefaults.standard.integer(forKey: "score")
+        if (score == 0) {
+            UserDefaults.standard.set(0, forKey: "score")
         }
     }
     

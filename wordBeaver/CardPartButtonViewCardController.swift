@@ -23,13 +23,16 @@ class CardPartButtonViewCardController: CardPartsViewController {
         cardPartButtonView.setTitleColor(UIColor.white, for: .normal)
         cardPartButtonView.contentHorizontalAlignment = .center
         cardPartButtonView.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        cardPartButtonView.backgroundColor = UIColor(red: 0, green: 0.6275, blue: 0.8784, alpha: 1.0)
+        cardPartButtonView.backgroundColor = UIColor(red: 0, green: 0.6, blue: 0.9, alpha: 1.0)
         cardPartButtonView.layer.cornerRadius = 5
         setupCardParts([cardPartTextView, cardPartButtonView])
     }
     
     @objc func buttonTapped() {
-        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "nextView")
+        self.present(nextViewController, animated:true, completion:nil)
+
         let alertController = UIAlertController(title: "Woohoo!", message: "Isn't that awesome!?", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

@@ -4,6 +4,9 @@ PODS:
     - RxDataSources (~> 3.1)
     - RxGesture (~> 2.1)
     - RxSwift (~> 4.4)
+  - Charts (3.2.1):
+    - Charts/Core (= 3.2.1)
+  - Charts/Core (3.2.1)
   - Differentiator (3.1.0)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
@@ -20,10 +23,12 @@ PODS:
 
 DEPENDENCIES:
   - CardParts
+  - Charts
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CardParts
+    - Charts
     - Differentiator
     - RxAtomic
     - RxCocoa
@@ -33,6 +38,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   CardParts: 3dd9da9199eb9fbfa6db1671fb6a4a1e29f3c8f4
+  Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
@@ -40,6 +46,6 @@ SPEC CHECKSUMS:
   RxGesture: 7f6dfb45dbde06e618c24442d38493e3144f2c95
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
 
-PODFILE CHECKSUM: 339fe0ca720beb5b658192f6dd091cba10acad15
+PODFILE CHECKSUM: 574aa39ee6964e9d8ac9fcbe05b88849359a7a0f
 
 COCOAPODS: 1.5.3

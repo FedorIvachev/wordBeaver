@@ -23,6 +23,11 @@
 		89868C1F21CDC42700C22A49 /* CardPartButtonViewCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C1E21CDC42700C22A49 /* CardPartButtonViewCardController.swift */; };
 		89868C2821CE208800C22A49 /* wordsFull.txt in Resources */ = {isa = PBXBuildFile; fileRef = 89868C2621CE208800C22A49 /* wordsFull.txt */; };
 		89868C2921CE208800C22A49 /* wordsFullRu.txt in Resources */ = {isa = PBXBuildFile; fileRef = 89868C2721CE208800C22A49 /* wordsFullRu.txt */; };
+		89868C2C21CE327400C22A49 /* CardPartTextFieldCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C2B21CE327400C22A49 /* CardPartTextFieldCardController.swift */; };
+		89868C2E21CE364300C22A49 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C2D21CE364300C22A49 /* LessonViewController.swift */; };
+		89868C3221CE4DCC00C22A49 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 89868C3121CE4DCC00C22A49 /* left.png */; };
+		89868C3421CE6B9800C22A49 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C3321CE6B9800C22A49 /* Extensions.swift */; };
+		89868C3621CE7CC900C22A49 /* CardPartBarViewCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C3521CE7CC800C22A49 /* CardPartBarViewCardController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		89868C1E21CDC42700C22A49 /* CardPartButtonViewCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPartButtonViewCardController.swift; sourceTree = "<group>"; };
 		89868C2621CE208800C22A49 /* wordsFull.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = wordsFull.txt; sourceTree = "<group>"; };
 		89868C2721CE208800C22A49 /* wordsFullRu.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = wordsFullRu.txt; sourceTree = "<group>"; };
+		89868C2B21CE327400C22A49 /* CardPartTextFieldCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPartTextFieldCardController.swift; sourceTree = "<group>"; };
+		89868C2D21CE364300C22A49 /* LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
+		89868C3121CE4DCC00C22A49 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		89868C3321CE6B9800C22A49 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		89868C3521CE7CC800C22A49 /* CardPartBarViewCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPartBarViewCardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,18 +140,23 @@
 		89814C5121CD7FFA0006723C /* wordBeaver */ = {
 			isa = PBXGroup;
 			children = (
+				89868C3521CE7CC800C22A49 /* CardPartBarViewCardController.swift */,
+				89868C3121CE4DCC00C22A49 /* left.png */,
 				89814C8421CDA8190006723C /* TrainViewController.swift */,
+				89868C2D21CE364300C22A49 /* LessonViewController.swift */,
 				89868C1E21CDC42700C22A49 /* CardPartButtonViewCardController.swift */,
 				89868C1C21CDC32100C22A49 /* CardPartPagedViewCardController.swift */,
 				89868C1A21CDC27D00C22A49 /* CardPartCenteredViewCardController.swift */,
 				89868C1821CDBFE900C22A49 /* CardPartTitleDescriptionViewCardController.swift */,
 				89868C1621CDBEE600C22A49 /* CardPartTextViewCardController.swift */,
+				89868C2B21CE327400C22A49 /* CardPartTextFieldCardController.swift */,
 				89814C5221CD7FFA0006723C /* AppDelegate.swift */,
 				89814C5621CD7FFA0006723C /* SecondViewController.swift */,
 				89814C5821CD7FFA0006723C /* Main.storyboard */,
 				89814C5B21CD7FFC0006723C /* Assets.xcassets */,
 				89814C5D21CD7FFC0006723C /* LaunchScreen.storyboard */,
 				89814C6021CD7FFC0006723C /* Info.plist */,
+				89868C3321CE6B9800C22A49 /* Extensions.swift */,
 			);
 			path = wordBeaver;
 			sourceTree = "<group>";
@@ -289,6 +304,7 @@
 			files = (
 				89868C2821CE208800C22A49 /* wordsFull.txt in Resources */,
 				89868C2921CE208800C22A49 /* wordsFullRu.txt in Resources */,
+				89868C3221CE4DCC00C22A49 /* left.png in Resources */,
 				89814C5F21CD7FFC0006723C /* LaunchScreen.storyboard in Resources */,
 				89814C5C21CD7FFC0006723C /* Assets.xcassets in Resources */,
 				89814C5A21CD7FFA0006723C /* Main.storyboard in Resources */,
@@ -344,6 +360,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-wordBeaver/Pods-wordBeaver-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CardParts/CardParts.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -356,6 +373,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardParts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -378,10 +396,14 @@
 				89814C5721CD7FFA0006723C /* SecondViewController.swift in Sources */,
 				89814C8521CDA8190006723C /* TrainViewController.swift in Sources */,
 				89868C1921CDBFE900C22A49 /* CardPartTitleDescriptionViewCardController.swift in Sources */,
+				89868C2C21CE327400C22A49 /* CardPartTextFieldCardController.swift in Sources */,
 				89868C1721CDBEE600C22A49 /* CardPartTextViewCardController.swift in Sources */,
+				89868C3621CE7CC900C22A49 /* CardPartBarViewCardController.swift in Sources */,
 				89814C5321CD7FFA0006723C /* AppDelegate.swift in Sources */,
 				89868C1B21CDC27D00C22A49 /* CardPartCenteredViewCardController.swift in Sources */,
 				89868C1D21CDC32100C22A49 /* CardPartPagedViewCardController.swift in Sources */,
+				89868C2E21CE364300C22A49 /* LessonViewController.swift in Sources */,
+				89868C3421CE6B9800C22A49 /* Extensions.swift in Sources */,
 				89868C1F21CDC42700C22A49 /* CardPartButtonViewCardController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
