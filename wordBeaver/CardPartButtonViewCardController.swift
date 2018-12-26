@@ -9,7 +9,22 @@
 import Foundation
 import CardParts
 
-class CardPartButtonViewCardController: CardPartsViewController {
+class CardPartButtonViewCardController: CardPartsViewController, ShadowCardTrait, RoundedCardTrait {
+    func shadowColor() -> CGColor {
+        return UIColor.lightGray.cgColor
+    }
+    
+    func shadowRadius() -> CGFloat {
+        return 5.0
+    }
+    
+    func shadowOpacity() -> Float {
+        return 0.5
+    }
+    
+    func cornerRadius() -> CGFloat {
+        return 10.0
+    }
     
     let cardPartTextView = CardPartTextView(type: .normal)
     let cardPartButtonView = CardPartButtonView()

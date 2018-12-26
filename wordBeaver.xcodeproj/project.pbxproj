@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		33FFE82D2F8D76A5F7256A89 /* Pods_wordBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DF98DFBC0BCCEC1C9C1CAF /* Pods_wordBeaver.framework */; };
+		897AC26D21D298E000F7AB14 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AC26C21D298E000F7AB14 /* NotificationsViewController.swift */; };
+		897AC27321D31BF700F7AB14 /* CardPartNotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AC27221D31BF700F7AB14 /* CardPartNotificationsController.swift */; };
 		89814C5321CD7FFA0006723C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89814C5221CD7FFA0006723C /* AppDelegate.swift */; };
 		89814C5A21CD7FFA0006723C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89814C5821CD7FFA0006723C /* Main.storyboard */; };
 		89814C5C21CD7FFC0006723C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89814C5B21CD7FFC0006723C /* Assets.xcassets */; };
@@ -15,18 +17,15 @@
 		89814C6A21CD7FFC0006723C /* wordBeaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89814C6921CD7FFC0006723C /* wordBeaverTests.swift */; };
 		89814C7521CD7FFC0006723C /* wordBeaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89814C7421CD7FFC0006723C /* wordBeaverUITests.swift */; };
 		89814C8521CDA8190006723C /* TrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89814C8421CDA8190006723C /* TrainViewController.swift */; };
-		89868C1721CDBEE600C22A49 /* CardPartTextViewCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C1621CDBEE600C22A49 /* CardPartTextViewCardController.swift */; };
-		89868C1921CDBFE900C22A49 /* CardPartTitleDescriptionViewCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C1821CDBFE900C22A49 /* CardPartTitleDescriptionViewCardController.swift */; };
-		89868C1B21CDC27D00C22A49 /* CardPartCenteredViewCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C1A21CDC27D00C22A49 /* CardPartCenteredViewCardController.swift */; };
 		89868C1D21CDC32100C22A49 /* CardPartPagedViewCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C1C21CDC32100C22A49 /* CardPartPagedViewCardController.swift */; };
 		89868C1F21CDC42700C22A49 /* CardPartButtonViewCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C1E21CDC42700C22A49 /* CardPartButtonViewCardController.swift */; };
 		89868C2821CE208800C22A49 /* wordsFull.txt in Resources */ = {isa = PBXBuildFile; fileRef = 89868C2621CE208800C22A49 /* wordsFull.txt */; };
 		89868C2921CE208800C22A49 /* wordsFullRu.txt in Resources */ = {isa = PBXBuildFile; fileRef = 89868C2721CE208800C22A49 /* wordsFullRu.txt */; };
-		89868C2C21CE327400C22A49 /* CardPartTextFieldCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C2B21CE327400C22A49 /* CardPartTextFieldCardController.swift */; };
 		89868C2E21CE364300C22A49 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C2D21CE364300C22A49 /* LessonViewController.swift */; };
 		89868C3221CE4DCC00C22A49 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 89868C3121CE4DCC00C22A49 /* left.png */; };
 		89868C3421CE6B9800C22A49 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C3321CE6B9800C22A49 /* Extensions.swift */; };
-		89868C3621CE7CC900C22A49 /* CardPartBarViewCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C3521CE7CC800C22A49 /* CardPartBarViewCardController.swift */; };
+		89868C3821CEADA100C22A49 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C3721CEADA100C22A49 /* HistoryController.swift */; };
+		89868C3C21CFF48400C22A49 /* RepeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89868C3B21CFF48400C22A49 /* RepeatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +49,8 @@
 		25C07BC5AFB0A907941373BC /* Pods-wordBeaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wordBeaver.release.xcconfig"; path = "Pods/Target Support Files/Pods-wordBeaver/Pods-wordBeaver.release.xcconfig"; sourceTree = "<group>"; };
 		5F4BDC43623FE56686C4058A /* Pods-wordBeaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wordBeaver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wordBeaver/Pods-wordBeaver.debug.xcconfig"; sourceTree = "<group>"; };
 		70DF98DFBC0BCCEC1C9C1CAF /* Pods_wordBeaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wordBeaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		897AC26C21D298E000F7AB14 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		897AC27221D31BF700F7AB14 /* CardPartNotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPartNotificationsController.swift; sourceTree = "<group>"; };
 		89814C4F21CD7FFA0006723C /* wordBeaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wordBeaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89814C5221CD7FFA0006723C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89814C5921CD7FFA0006723C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,18 +64,15 @@
 		89814C7421CD7FFC0006723C /* wordBeaverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordBeaverUITests.swift; sourceTree = "<group>"; };
 		89814C7621CD7FFC0006723C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89814C8421CDA8190006723C /* TrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainViewController.swift; sourceTree = "<group>"; };
-		89868C1621CDBEE600C22A49 /* CardPartTextViewCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPartTextViewCardController.swift; sourceTree = "<group>"; };
-		89868C1821CDBFE900C22A49 /* CardPartTitleDescriptionViewCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPartTitleDescriptionViewCardController.swift; sourceTree = "<group>"; };
-		89868C1A21CDC27D00C22A49 /* CardPartCenteredViewCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPartCenteredViewCardController.swift; sourceTree = "<group>"; };
 		89868C1C21CDC32100C22A49 /* CardPartPagedViewCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPartPagedViewCardController.swift; sourceTree = "<group>"; };
 		89868C1E21CDC42700C22A49 /* CardPartButtonViewCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPartButtonViewCardController.swift; sourceTree = "<group>"; };
 		89868C2621CE208800C22A49 /* wordsFull.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = wordsFull.txt; sourceTree = "<group>"; };
 		89868C2721CE208800C22A49 /* wordsFullRu.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = wordsFullRu.txt; sourceTree = "<group>"; };
-		89868C2B21CE327400C22A49 /* CardPartTextFieldCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPartTextFieldCardController.swift; sourceTree = "<group>"; };
 		89868C2D21CE364300C22A49 /* LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
 		89868C3121CE4DCC00C22A49 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		89868C3321CE6B9800C22A49 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		89868C3521CE7CC800C22A49 /* CardPartBarViewCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPartBarViewCardController.swift; sourceTree = "<group>"; };
+		89868C3721CEADA100C22A49 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		89868C3B21CFF48400C22A49 /* RepeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,18 +139,17 @@
 				89868C3121CE4DCC00C22A49 /* left.png */,
 				89814C8421CDA8190006723C /* TrainViewController.swift */,
 				89868C2D21CE364300C22A49 /* LessonViewController.swift */,
-				89868C1E21CDC42700C22A49 /* CardPartButtonViewCardController.swift */,
-				89868C1C21CDC32100C22A49 /* CardPartPagedViewCardController.swift */,
-				89868C1A21CDC27D00C22A49 /* CardPartCenteredViewCardController.swift */,
-				89868C1821CDBFE900C22A49 /* CardPartTitleDescriptionViewCardController.swift */,
-				89868C1621CDBEE600C22A49 /* CardPartTextViewCardController.swift */,
-				89868C2B21CE327400C22A49 /* CardPartTextFieldCardController.swift */,
-				89868C3521CE7CC800C22A49 /* CardPartBarViewCardController.swift */,
+				89868C3B21CFF48400C22A49 /* RepeatViewController.swift */,
+				89868C3721CEADA100C22A49 /* HistoryController.swift */,
+				897AC26C21D298E000F7AB14 /* NotificationsViewController.swift */,
 				89814C5221CD7FFA0006723C /* AppDelegate.swift */,
-				89814C5821CD7FFA0006723C /* Main.storyboard */,
 				89814C5B21CD7FFC0006723C /* Assets.xcassets */,
+				89814C5821CD7FFA0006723C /* Main.storyboard */,
 				89814C5D21CD7FFC0006723C /* LaunchScreen.storyboard */,
 				89814C6021CD7FFC0006723C /* Info.plist */,
+				89868C1E21CDC42700C22A49 /* CardPartButtonViewCardController.swift */,
+				89868C1C21CDC32100C22A49 /* CardPartPagedViewCardController.swift */,
+				897AC27221D31BF700F7AB14 /* CardPartNotificationsController.swift */,
 				89868C3321CE6B9800C22A49 /* Extensions.swift */,
 			);
 			path = wordBeaver;
@@ -391,15 +388,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				89814C8521CDA8190006723C /* TrainViewController.swift in Sources */,
-				89868C1921CDBFE900C22A49 /* CardPartTitleDescriptionViewCardController.swift in Sources */,
-				89868C2C21CE327400C22A49 /* CardPartTextFieldCardController.swift in Sources */,
-				89868C1721CDBEE600C22A49 /* CardPartTextViewCardController.swift in Sources */,
-				89868C3621CE7CC900C22A49 /* CardPartBarViewCardController.swift in Sources */,
+				89868C3821CEADA100C22A49 /* HistoryController.swift in Sources */,
 				89814C5321CD7FFA0006723C /* AppDelegate.swift in Sources */,
-				89868C1B21CDC27D00C22A49 /* CardPartCenteredViewCardController.swift in Sources */,
 				89868C1D21CDC32100C22A49 /* CardPartPagedViewCardController.swift in Sources */,
+				897AC26D21D298E000F7AB14 /* NotificationsViewController.swift in Sources */,
+				897AC27321D31BF700F7AB14 /* CardPartNotificationsController.swift in Sources */,
 				89868C2E21CE364300C22A49 /* LessonViewController.swift in Sources */,
 				89868C3421CE6B9800C22A49 /* Extensions.swift in Sources */,
+				89868C3C21CFF48400C22A49 /* RepeatViewController.swift in Sources */,
 				89868C1F21CDC42700C22A49 /* CardPartButtonViewCardController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

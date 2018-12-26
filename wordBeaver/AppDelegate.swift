@@ -8,17 +8,26 @@
 
 import UIKit
 import CardParts
+import UserNotifications
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let notificationCenter = UNUserNotificationCenter.current()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         CardPartsMintTheme().apply()
+        let options: UNAuthorizationOptions = [.alert]
+        notificationCenter.requestAuthorization(options: options) {
+            (didAllow, error) in
+            if !didAllow {
+                print("User has declined notifications")
+            }
+        }
 
         return true
     }
@@ -43,6 +52,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func scheduleNotification(wordsToLearn: String) {
+        let content = UNMutableNotificationContent() // Содержимое уведомления
+        
+        content.title = "Repeate new words:"
+        content.body = wordsToLearn
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (60), repeats: false)
+        
+        let identifier = "learnNewWords"
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        notificationCenter.add(request) { (error) in
+            if let error = error {
+                print("Error \(error.localizedDescription)")
+            }
+        }
     }
 
 

@@ -10,7 +10,23 @@ import Foundation
 import CardParts
 import Charts
 
-class CardPartPagedViewCardController: CardPartsViewController {
+class CardPartPagedViewCardController: CardPartsViewController, ShadowCardTrait, RoundedCardTrait {
+    func shadowColor() -> CGColor {
+        return UIColor.lightGray.cgColor
+    }
+    
+    func shadowRadius() -> CGFloat {
+        return 5.0
+    }
+    
+    func shadowOpacity() -> Float {
+        return 0.5
+    }
+    
+    func cornerRadius() -> CGFloat {
+        return 10.0
+    }
+    
     
     let cardPartTextView = CardPartTextView(type: .normal)
     let emojis: [String] = ["😎", "🤪", "🤩", "👻", "🤟🏽", "💋", "💃🏽"]
@@ -65,7 +81,22 @@ class CardPartPagedViewCardController: CardPartsViewController {
     }
 }
 
-class BarChartController : CardPartsViewController {
+class BarChartController : CardPartsViewController, ShadowCardTrait, RoundedCardTrait {
+    func shadowColor() -> CGColor {
+        return UIColor.lightGray.cgColor
+    }
+    
+    func shadowRadius() -> CGFloat {
+        return 10.0
+    }
+    
+    func shadowOpacity() -> Float {
+        return 0.5
+    }
+    
+    func cornerRadius() -> CGFloat {
+        return 10.0
+    }
     let cardPartTextView = CardPartTextView(type: .normal)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,5 +113,4 @@ class BarChartController : CardPartsViewController {
         let cardPartPagedView = CardPartPagedView(withPages: stackViews, andHeight: 200)
         setupCardParts([cardPartTextView, cardPartPagedView])
     }
-    
 }

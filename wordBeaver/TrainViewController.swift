@@ -22,12 +22,14 @@ class TrainViewController: CardsViewController{
         // Do any additional setup after loading the view, typically from a nib.
         
         let cards: [CardPartsViewController] = [
+            HiddenCardController(),
             CardPartPagedViewCardController(),
             CardPartButtonViewCardController(),
             BarChartController()
         ]
         
         loadCards(cards: cards)
+        
         
     }
     

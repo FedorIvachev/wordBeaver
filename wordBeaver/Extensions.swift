@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CardParts
 
 extension UIView {
     
@@ -53,5 +54,12 @@ func addWordsToCurrentLesson(){
         UserDefaults.standard.set(lesson, forKey: "lesson")
     } else {
         print("Set already!")
+    }
+}
+
+class HiddenCardController: CardPartsViewController, TransparentCardTrait{
+    override func viewDidLoad() {
+        let separator = CardPartSpacerView(height: 0)
+        setupCardParts([separator])
     }
 }

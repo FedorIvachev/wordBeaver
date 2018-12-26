@@ -68,12 +68,6 @@ class LessonViewCardController: CardPartsViewController {
 }
 
 
-class LessonCardController: CardPartsViewController {
-    
-}
-
-
-
 
 class LessonViewController: UIViewController {
     
@@ -82,8 +76,8 @@ class LessonViewController: UIViewController {
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var translationTextField: UITextField!
     @IBOutlet weak var translateButton: UIButton!
-    @IBOutlet weak var progressView: UIProgressView!
     
+    @IBOutlet weak var progressView: UIProgressView!
     var counter:Int = 0 {
         didSet {
             let fractionalProgress = Float(counter) / 11.0
@@ -94,6 +88,8 @@ class LessonViewController: UIViewController {
     var lessonDict = UserDefaults.standard.dictionary(forKey: "lesson")
     var wordTranslation = ""
     var cheatedDict = [String: String]()
+    let notificationCenter = NotificationCenter.default
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -154,6 +150,16 @@ class LessonViewController: UIViewController {
             UserDefaults.standard.set(learnedDict1, forKey: "learned")
             print(learnedDict1)
         }
+        
+        var wordsToLearn = ""
+        var sessionWords = UserDefaults.standard.dictionary(forKey: "lesson")
+        for _ in 1...4{
+            let word = sessionWords?.popFirst()
+            wordsToLearn = wordsToLearn + word!.key + " - " + (word!.value as! String) + "\n"
+        }
+        let appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
+        
+        appDelegate?.scheduleNotification(wordsToLearn: wordsToLearn)
     }
     
     func deleteLearnedWords(){
