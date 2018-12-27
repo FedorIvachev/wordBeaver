@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         content.title = "Repeate new words:"
         content.body = wordsToLearn
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (60), repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (60*60), repeats: false)
         
         let identifier = "learnNewWords"
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)

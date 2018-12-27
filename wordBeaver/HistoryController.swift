@@ -14,18 +14,24 @@ class HistoryViewController: UIViewController, UITableViewDelegate{
     @IBOutlet weak var learnedTable: UITableView!
     
     @IBOutlet weak var repeatButton: UIBarButtonItem!
+    
     var learned = UserDefaults.standard.dictionary(forKey: "learned")
     var indices: [String] = []
     var arr : [(String, String)] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //learned = UserDefaults.standard.dictionary(forKey: "learned")
-        for (key, value) in learned! {
-            arr.append((key, value as! String))
+        if learned == nil || learned?.count == 0{
+            repeatButton.isEnabled = false
+        } else {
+            for (key, value) in learned! {
+                arr.append((key, value as! String))
+            }
+            arr = arr.sorted(by: { $0.0 < $1.0 })
+            indices = learned!.keys.sorted()
         }
-        arr = arr.sorted(by: { $0.0 < $1.0 })
-        indices = learned!.keys.sorted()
+        //learned = UserDefaults.standard.dictionary(forKey: "learned")
+        
     }
 }
 

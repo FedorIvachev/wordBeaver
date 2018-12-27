@@ -47,7 +47,7 @@ func addWordsToCurrentLesson(){
     let lessonDict = UserDefaults.standard.dictionary(forKey: "lesson")
     if (lessonDict == nil || lessonDict!.count == 0) {
         var lesson = [String: String]()
-        for _ in 0...10{
+        while lesson.count != 11 {
             let word = mainDict?.randomElement()
             lesson[word?.key ?? "Sample"] = word?.value as? String
         }

@@ -35,8 +35,10 @@ class CardChartViewController: CardPartsViewController , ShadowCardTrait, Rounde
         
         let lessonDict = UserDefaults.standard.dictionary(forKey: "lesson")
         let translatedToday = UserDefaults.standard.integer(forKey: "translatedToday")
-        let learnedOverall = UserDefaults.standard.dictionary(forKey: "learned")?.count
-        
+        var learnedOverall = UserDefaults.standard.dictionary(forKey: "learned")?.count
+        if learnedOverall == nil{
+            learnedOverall = 0
+        }
         var stackViews: [CardPartStackView] = []
         
         let sv = CardPartStackView()

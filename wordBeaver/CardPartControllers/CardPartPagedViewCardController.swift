@@ -35,13 +35,14 @@ class CardPartPagedViewCardController: CardPartsViewController, ShadowCardTrait,
         super.viewDidLoad()
         
         var lessonDict = UserDefaults.standard.dictionary(forKey: "lesson")
-        
+        print(lessonDict)
         
         cardPartTextView.text = "These are new words for you to learn today:"
         
         var stackViews: [CardPartStackView] = []
         
-        for _ in 0...10 {
+        for i in 0...10 {
+            print(i)
             let word = lessonDict?.first
             
             let sv = CardPartStackView()

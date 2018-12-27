@@ -160,6 +160,11 @@ class LessonViewController: UIViewController {
         let appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
         
         appDelegate?.scheduleNotification(wordsToLearn: wordsToLearn)
+        
+        
+        var translatedToday = UserDefaults.standard.integer(forKey: "translatedToday")
+        translatedToday += 11
+        UserDefaults.standard.set(translatedToday, forKey: "translatedToday")
     }
     
     func deleteLearnedWords(){
@@ -174,5 +179,6 @@ class LessonViewController: UIViewController {
         UserDefaults.standard.set(mainDict, forKey: "main")
         let newLessonDict = [String: String]()
         UserDefaults.standard.set(newLessonDict, forKey: "lesson")
+        addWordsToCurrentLesson()
     }
 }
