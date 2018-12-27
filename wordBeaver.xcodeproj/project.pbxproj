@@ -10,6 +10,11 @@
 		33FFE82D2F8D76A5F7256A89 /* Pods_wordBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DF98DFBC0BCCEC1C9C1CAF /* Pods_wordBeaver.framework */; };
 		897AC26D21D298E000F7AB14 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AC26C21D298E000F7AB14 /* NotificationsViewController.swift */; };
 		897AC27321D31BF700F7AB14 /* CardPartNotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AC27221D31BF700F7AB14 /* CardPartNotificationsController.swift */; };
+		897AC27521D3372600F7AB14 /* CardPartBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AC27421D3372600F7AB14 /* CardPartBarViewController.swift */; };
+		897AC27721D438E400F7AB14 /* CardChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AC27621D438E400F7AB14 /* CardChartViewController.swift */; };
+		897AC27921D4565800F7AB14 /* wordsFullChEn.txt in Resources */ = {isa = PBXBuildFile; fileRef = 897AC27821D4565800F7AB14 /* wordsFullChEn.txt */; };
+		897AC27B21D459DD00F7AB14 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AC27A21D459DD00F7AB14 /* LanguageViewController.swift */; };
+		897AC27D21D46B6200F7AB14 /* wordsFullChRu.txt in Resources */ = {isa = PBXBuildFile; fileRef = 897AC27C21D46B6200F7AB14 /* wordsFullChRu.txt */; };
 		89814C5321CD7FFA0006723C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89814C5221CD7FFA0006723C /* AppDelegate.swift */; };
 		89814C5A21CD7FFA0006723C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89814C5821CD7FFA0006723C /* Main.storyboard */; };
 		89814C5C21CD7FFC0006723C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89814C5B21CD7FFC0006723C /* Assets.xcassets */; };
@@ -51,6 +56,11 @@
 		70DF98DFBC0BCCEC1C9C1CAF /* Pods_wordBeaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wordBeaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		897AC26C21D298E000F7AB14 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		897AC27221D31BF700F7AB14 /* CardPartNotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPartNotificationsController.swift; sourceTree = "<group>"; };
+		897AC27421D3372600F7AB14 /* CardPartBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPartBarViewController.swift; sourceTree = "<group>"; };
+		897AC27621D438E400F7AB14 /* CardChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardChartViewController.swift; sourceTree = "<group>"; };
+		897AC27821D4565800F7AB14 /* wordsFullChEn.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = wordsFullChEn.txt; sourceTree = "<group>"; };
+		897AC27A21D459DD00F7AB14 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		897AC27C21D46B6200F7AB14 /* wordsFullChRu.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = wordsFullChRu.txt; sourceTree = "<group>"; };
 		89814C4F21CD7FFA0006723C /* wordBeaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wordBeaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89814C5221CD7FFA0006723C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89814C5921CD7FFA0006723C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -142,6 +152,7 @@
 				89868C3B21CFF48400C22A49 /* RepeatViewController.swift */,
 				89868C3721CEADA100C22A49 /* HistoryController.swift */,
 				897AC26C21D298E000F7AB14 /* NotificationsViewController.swift */,
+				897AC27A21D459DD00F7AB14 /* LanguageViewController.swift */,
 				89814C5221CD7FFA0006723C /* AppDelegate.swift */,
 				89814C5B21CD7FFC0006723C /* Assets.xcassets */,
 				89814C5821CD7FFA0006723C /* Main.storyboard */,
@@ -149,8 +160,10 @@
 				89814C6021CD7FFC0006723C /* Info.plist */,
 				89868C1E21CDC42700C22A49 /* CardPartButtonViewCardController.swift */,
 				89868C1C21CDC32100C22A49 /* CardPartPagedViewCardController.swift */,
+				897AC27421D3372600F7AB14 /* CardPartBarViewController.swift */,
 				897AC27221D31BF700F7AB14 /* CardPartNotificationsController.swift */,
 				89868C3321CE6B9800C22A49 /* Extensions.swift */,
+				897AC27621D438E400F7AB14 /* CardChartViewController.swift */,
 			);
 			path = wordBeaver;
 			sourceTree = "<group>";
@@ -176,6 +189,8 @@
 		89868C2A21CE20B000C22A49 /* Dicts */ = {
 			isa = PBXGroup;
 			children = (
+				897AC27C21D46B6200F7AB14 /* wordsFullChRu.txt */,
+				897AC27821D4565800F7AB14 /* wordsFullChEn.txt */,
 				89868C2721CE208800C22A49 /* wordsFullRu.txt */,
 				89868C2621CE208800C22A49 /* wordsFull.txt */,
 			);
@@ -296,6 +311,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				897AC27D21D46B6200F7AB14 /* wordsFullChRu.txt in Resources */,
+				897AC27921D4565800F7AB14 /* wordsFullChEn.txt in Resources */,
 				89868C2821CE208800C22A49 /* wordsFull.txt in Resources */,
 				89868C2921CE208800C22A49 /* wordsFullRu.txt in Resources */,
 				89868C3221CE4DCC00C22A49 /* left.png in Resources */,
@@ -394,8 +411,11 @@
 				897AC26D21D298E000F7AB14 /* NotificationsViewController.swift in Sources */,
 				897AC27321D31BF700F7AB14 /* CardPartNotificationsController.swift in Sources */,
 				89868C2E21CE364300C22A49 /* LessonViewController.swift in Sources */,
+				897AC27721D438E400F7AB14 /* CardChartViewController.swift in Sources */,
 				89868C3421CE6B9800C22A49 /* Extensions.swift in Sources */,
 				89868C3C21CFF48400C22A49 /* RepeatViewController.swift in Sources */,
+				897AC27B21D459DD00F7AB14 /* LanguageViewController.swift in Sources */,
+				897AC27521D3372600F7AB14 /* CardPartBarViewController.swift in Sources */,
 				89868C1F21CDC42700C22A49 /* CardPartButtonViewCardController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

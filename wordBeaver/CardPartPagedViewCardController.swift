@@ -64,8 +64,8 @@ class CardPartPagedViewCardController: CardPartsViewController, ShadowCardTrait,
             translation.font = UIFont.systemFont(ofSize: 20)
             sv.addArrangedSubview(translation)
             
-            let barView = BarChartView()
-            sv.addArrangedSubview(barView)
+            //let barView = BarChartView()
+            //sv.addArrangedSubview(barView)
             
             let emoji = CardPartTextView(type: .normal)
             emoji.text = self.emojis[Int(arc4random_uniform(UInt32(self.emojis.count)))]
@@ -75,42 +75,8 @@ class CardPartPagedViewCardController: CardPartsViewController, ShadowCardTrait,
             lessonDict?.removeValue(forKey: word?.key ?? "Sample")
         }
         
-        let cardPartPagedView = CardPartPagedView(withPages: stackViews, andHeight: 200)
+        let cardPartPagedView = CardPartPagedView(withPages: stackViews, andHeight: 170)
         
-        setupCardParts([cardPartTextView, cardPartPagedView])
-    }
-}
-
-class BarChartController : CardPartsViewController, ShadowCardTrait, RoundedCardTrait {
-    func shadowColor() -> CGColor {
-        return UIColor.lightGray.cgColor
-    }
-    
-    func shadowRadius() -> CGFloat {
-        return 10.0
-    }
-    
-    func shadowOpacity() -> Float {
-        return 0.5
-    }
-    
-    func cornerRadius() -> CGFloat {
-        return 10.0
-    }
-    let cardPartTextView = CardPartTextView(type: .normal)
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        var stackViews: [CardPartStackView] = []
-        let sv = CardPartStackView()
-        sv.axis = .vertical
-        sv.spacing = 8
-        stackViews.append(sv)
-        let title = CardPartTextView(type: .title)
-        title.text = "Your Progress"
-        title.textAlignment = .center
-        title.font = UIFont.systemFont(ofSize: 20)
-        sv.addArrangedSubview(title)
-        let cardPartPagedView = CardPartPagedView(withPages: stackViews, andHeight: 200)
         setupCardParts([cardPartTextView, cardPartPagedView])
     }
 }

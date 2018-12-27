@@ -16,6 +16,7 @@ class TrainViewController: CardsViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addWordsToDictionary()
         addWordsToCurrentLesson()
         
@@ -25,7 +26,7 @@ class TrainViewController: CardsViewController{
             HiddenCardController(),
             CardPartPagedViewCardController(),
             CardPartButtonViewCardController(),
-            BarChartController()
+            CardChartViewController()
         ]
         
         loadCards(cards: cards)
