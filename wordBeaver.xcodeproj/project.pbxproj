@@ -18,6 +18,7 @@
 		897AC27F21D4731400F7AB14 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AC27E21D4731400F7AB14 /* PrivacyPolicyViewController.swift */; };
 		897AC28121D51B7B00F7AB14 /* CardHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AC28021D51B7B00F7AB14 /* CardHelpViewController.swift */; };
 		897AC28621D52E0700F7AB14 /* CardPrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897AC28521D52E0700F7AB14 /* CardPrivacyViewController.swift */; };
+		897AC28821D557CF00F7AB14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 897AC28721D557CF00F7AB14 /* Images.xcassets */; };
 		89814C5321CD7FFA0006723C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89814C5221CD7FFA0006723C /* AppDelegate.swift */; };
 		89814C5A21CD7FFA0006723C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89814C5821CD7FFA0006723C /* Main.storyboard */; };
 		89814C5C21CD7FFC0006723C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89814C5B21CD7FFC0006723C /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		897AC27E21D4731400F7AB14 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		897AC28021D51B7B00F7AB14 /* CardHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHelpViewController.swift; sourceTree = "<group>"; };
 		897AC28521D52E0700F7AB14 /* CardPrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPrivacyViewController.swift; sourceTree = "<group>"; };
+		897AC28721D557CF00F7AB14 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		89814C4F21CD7FFA0006723C /* wordBeaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wordBeaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89814C5221CD7FFA0006723C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89814C5921CD7FFA0006723C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				89814C6021CD7FFC0006723C /* Info.plist */,
 				897AC28221D52D6800F7AB14 /* CardPartControllers */,
 				89868C3321CE6B9800C22A49 /* Extensions.swift */,
+				897AC28721D557CF00F7AB14 /* Images.xcassets */,
 			);
 			path = wordBeaver;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				897AC28821D557CF00F7AB14 /* Images.xcassets in Resources */,
 				897AC27D21D46B6200F7AB14 /* wordsFullChRu.txt in Resources */,
 				897AC27921D4565800F7AB14 /* wordsFullChEn.txt in Resources */,
 				89868C2821CE208800C22A49 /* wordsFull.txt in Resources */,
@@ -611,7 +615,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5F4BDC43623FE56686C4058A /* Pods-wordBeaver.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FD9AJ84994;
 				INFOPLIST_FILE = wordBeaver/Info.plist;
@@ -631,7 +636,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 25C07BC5AFB0A907941373BC /* Pods-wordBeaver.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FD9AJ84994;
 				INFOPLIST_FILE = wordBeaver/Info.plist;
