@@ -47,7 +47,7 @@ class RepeatViewController: UIViewController {
         
         wordLabel.text = (word?.value as! String)
         wordTranslation = word!.key
-        
+        translationTextField.becomeFirstResponder()
         translationTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     

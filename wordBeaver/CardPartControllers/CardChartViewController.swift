@@ -47,7 +47,7 @@ class CardChartViewController: CardPartsViewController , ShadowCardTrait, Rounde
         stackViews.append(sv)
             
         let title = CardPartTextView(type: .title)
-        title.text = "Number of words translated today:"
+        title.text = "Number of words translated overall:"
         title.font = UIFont.boldSystemFont(ofSize: 30)
         title.textAlignment = .center
         sv.addArrangedSubview(title)

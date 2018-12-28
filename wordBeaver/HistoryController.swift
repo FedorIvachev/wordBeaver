@@ -13,7 +13,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate{
     
     @IBOutlet weak var learnedTable: UITableView!
     
-    @IBOutlet weak var repeatButton: UIBarButtonItem!
+    
+    @IBOutlet weak var repeatButton: UIButton!
     
     var learned = UserDefaults.standard.dictionary(forKey: "learned")
     var indices: [String] = []

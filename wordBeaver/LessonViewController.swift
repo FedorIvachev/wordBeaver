@@ -102,7 +102,7 @@ class LessonViewController: UIViewController {
         let word = lessonDict?.first
         wordLabel.text = (word?.value as! String)
         wordTranslation = word!.key
-        
+        translationTextField.becomeFirstResponder()
         translationTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     

@@ -33,17 +33,26 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBAction func applyButton(_ sender: Any) {
         let nativeLang = nativePickerData[nativePicker.selectedRow(inComponent: 0)]
         let desiredLang = desiredPickerData[desiredPicker.selectedRow(inComponent: 0)]
-        UserDefaults.standard.set(nativeLang, forKey: "native")
-        UserDefaults.standard.set(desiredLang, forKey: "desired")
-        changeLanguages(native: nativeLang, desired: desiredLang)
-        let lesson = [String: String]()
-        UserDefaults.standard.set(lesson, forKey: "lesson")
-        addWordsToCurrentLesson()
-        let learned = [String: String]()
-        UserDefaults.standard.set(learned, forKey: "learned")
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
-        self.present(newViewController, animated: true, completion: nil)
+        if (nativeLang == desiredLang) {
+            let alertController = UIAlertController(title: "Wrong language", message: "Please select different languages", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            UserDefaults.standard.set(nativeLang, forKey: "native")
+            UserDefaults.standard.set(desiredLang, forKey: "desired")
+            changeLanguages(native: nativeLang, desired: desiredLang)
+            let lesson = [String: String]()
+            UserDefaults.standard.set(lesson, forKey: "lesson")
+            addWordsToCurrentLesson()
+            let learned = [String: String]()
+            UserDefaults.standard.set(learned, forKey: "learned")
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
+            self.present(newViewController, animated: true, completion: nil)
+        }
     }
     
     @IBOutlet weak var applyButtonOutlet: UIButton!
@@ -53,8 +62,8 @@ class LanguageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nativePickerData = ["Russian", "English", "Chinese"]
-        desiredPickerData = ["Russian", "English", "Chinese"]
+        nativePickerData = ["English", "Russian", "Chinese"]
+        desiredPickerData = ["English", "Russian", "Chinese"]
         applyButtonOutlet.roundCorners()
         
     }
